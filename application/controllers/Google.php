@@ -234,8 +234,8 @@ class Google extends EA_Controller {
                     'notes' => $google_event->getSummary() . ' ' . $google_event->getDescription(),
                     'id_users_provider' => $provider_id,
                     'id_google_calendar' => $google_event->getId(),
-                    'id_users_customer' => NULL,
-                    'id_services' => NULL,
+                    'id_users_customer' => 1,
+                    'id_services' => 1,
                 ];
 
                 $CI->unavailabilities_model->save($unavailability);
