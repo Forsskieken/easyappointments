@@ -335,7 +335,7 @@ class Appointments_model extends EA_Model {
             $this->db->where('delete_datetime IS NULL');
         }
 
-        $appointments = $this->db->get_where('appointments', ['is_unavailability' => FALSE], $limit, $offset)->result_array();
+        $appointments = $this->db->get_where('appointments', ['is_unavailability' => TRUE], $limit, $offset)->result_array();
 
         foreach ($appointments as &$appointment)
         {
